@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Science Enthusiast</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        // jQuery document ready function
+        $(document).ready(function() {
+            // Add hover effect for each section
+            $('.section').hover(function() {
+                $(this).addClass('hover');
+            }, function() {
+                $(this).removeClass('hover');
+            });
+        });
+    </script>
+    <style>
+        /* Define styles for the "About Me" section */
+        .section {
+            padding: 50px 0;
+            text-align: center;
+        }
+    
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+    
+        .about-content p {
+            opacity: 0; /* Initially hide the paragraphs */
+            transition: opacity 1s ease-in-out; /* Add transition for opacity */
+        }
+    
+        /* Add animation to fade in the paragraphs when they become visible */
+        .about-content p.fade-in {
+            opacity: 1;
+        }
+        #portfolio {
+         text-align: left;
+        }
+    </style>
+    
+    <script>
+        // JavaScript to trigger the animation when the section is scrolled into view
+        document.addEventListener("DOMContentLoaded", function() {
+            // Get all paragraphs within the "About Me" section
+            var paragraphs = document.querySelectorAll(".about-content p");
+    
+            // Function to check if an element is in the viewport
+            function isElementInViewport(el) {
+                var rect = el.getBoundingClientRect();
+                return (
+                    rect.top >= 0 &&
+                    rect.left >= 0 &&
+                    rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+                    rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+                );
+            }
+    
+            // Function to check if any paragraph is in the viewport and add the fade-in class
+            function checkElementsVisibility() {
+                paragraphs.forEach(function(paragraph) {
+                    if (isElementInViewport(paragraph)) {
+                        paragraph.classList.add("fade-in");
+                    }
+                });
+            }
+    
+            // Check paragraph visibility when the page is loaded and when scrolled
+            checkElementsVisibility();
+            window.addEventListener("scroll", checkElementsVisibility);
+        });
+    </script>
+    
+</head>
+<body>
+
+<!-- Main container -->
+<div class="main-container">
+
+    <!-- Image at middle left -->
+    <div class="profile-image-container">
+        <img src="Suresh.jpg" alt="Suresh" class="profile-image">
+    </div>
+
+    <!-- Content container -->
+    <div class="content-container">
+
+        <!-- About Me Section -->
+        <section id="about" class="section">
+            <nav>
+                   <span> <a href="P1.html">Home</a></span>
+                   <a href="about.html" >About</a>
+                   <a href="education.html">Education</a>
+                    <a href="skills.html">Skills</a>
+                    <a href="P1.html">Articles/Projects</a>
+                    <a href="contact.html">Contact</a>
+                </ul>
+            </nav>
+            <!-- Detailed Information About Yourself -->
+        </section>
+
+        <!-- Portfolio Section -->
+        <section id="portfolio" class="section" style="padding-left: 20px;">
+            <h2>YALLA VENKATA SURESH</h2>
+            <H4>Data Science Enthusiast</H4>
+            <!-- Projects Showcase -->
+            <section id="about" class="section">
+                <div class="container">
+                    <h2>About Me</h2>
+                    <div class="about-content" style="font-size: 20px;" >
+                        <p>My name is Yalla Venkata Suresh. I am currently studying in RGUKT IIIT Srikakulam campus in the 3rd year of the Computer Science and Engineering (CSE) branch.</p>
+                        <p>I am passionate about data science and consider myself a data science enthusiast. I have a strong foundation in machine learning (ML), deep learning (DL), and data analytics.</p>
+                        <p>During my academic journey, I have gained practical experience in applying ML and DL techniques to solve real-world problems. I have also undertaken research work in the field of machine learning, where I explored various algorithms and methodologies.</p>
+                        <p>My academic background, coupled with my passion for data science, drives me to continually learn and grow in this field. I am eager to contribute my skills and knowledge to meaningful projects and collaborations in the data science community.</p>
+                        <p>Feel free to reach out to me for further discussion or collaboration opportunities.</p>
+                    </div>
+                </div>
+            </section>
+            
+                
+
+                <!-- Add more projects as needed -->
+            </div>
+        </section>
+
+        <!-- Other sections... -->
+
+    </div>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Science Enthusiast</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        // jQuery document ready function
+        $(document).ready(function() {
+            // Add hover effect for each section
+            $('.section').hover(function() {
+                $(this).addClass('hover');
+            }, function() {
+                $(this).removeClass('hover');
+            });
+        });
+    </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function() {
+          // Add markers to the map for each education location
+          // Here, you would use a mapping API like Google Maps API
+          // For demonstration purposes, I'm using a simple Google Maps URL
+          $('#educ1').each(function(index) {
+            // Replace this URL with the actual Google Maps URL for each location
+            var googleMapsURL = "https://www.google.com/maps/place/RGUKT+IIIT+SKLM/@18.2878218,83.8256314,3a,75y,90t/data=!3m8!1e2!3m6!1sAF1QipPgJ4o--HAD78uNZRAYOpSbHgFu2lrNk8YGB9XS!2e10!3e12!6shttps:%2F%2Flh5.googleusercontent.com%2Fp%2FAF1QipPgJ4o--HAD78uNZRAYOpSbHgFu2lrNk8YGB9XS%3Dw152-h86-k-no!7i3264!8i1840!4m11!1m2!2m1!1srgukt+srikakulam!3m7!1s0x3a3c13503f331c41:0xb4212620d053a81f!8m2!3d18.2878218!4d83.8256314!10e5!15sChByZ3VrdCBzcmlrYWt1bGFtkgEKdW5pdmVyc2l0eeABAA!16s%2Fg%2F11h2p4s2_5?entry=ttu" + encodeURI($(this).find("h3").text()); // Using the education name as the query
+            
+            $(this).click(function() {
+              window.open(googleMapsURL, "_blank"); // Open the Google Maps URL in a new tab/window
+            });
+          });
+          $('#educ2').each(function(index) {
+            // Replace this URL with the actual Google Maps URL for each location
+            var googleMapsURL = "https://www.google.com/maps/place/RGUKT+IIIT+Boys+Campus,+Srikakulam/@18.2681788,83.8091616,3a,75y,90t/data=!3m8!1e2!3m6!1sAF1QipNc9ryjZsOtlgHLbcftmwJq9Rg-2B6QOhAfku4k!2e10!3e12!6shttps:%2F%2Flh5.googleusercontent.com%2Fp%2FAF1QipNc9ryjZsOtlgHLbcftmwJq9Rg-2B6QOhAfku4k%3Dw86-h114-k-no!7i3120!8i4160!4m11!1m2!2m1!1srgukt+srikakulam!3m7!1s0x3a3c13a13fc5f4d3:0x9f088865896f394a!8m2!3d18.2681788!4d83.8091616!10e5!15sChByZ3VrdCBzcmlrYWt1bGFtkgEKdW5pdmVyc2l0eeABAA!16s%2Fg%2F11h579f1vf?entry=ttu" + encodeURI($(this).find("h3").text()); // Using the education name as the query
+            
+            $(this).click(function() {
+              window.open(googleMapsURL, "_blank"); // Open the Google Maps URL in a new tab/window
+            });
+          });
+          $('#educ3').each(function(index) {
+            // Replace this URL with the actual Google Maps URL for each location
+            var googleMapsURL = "https://www.google.com/maps/place/Z.P.P.High+School,Yendapalli/@17.1007239,82.3223926,3a,75y,90t/data=!3m8!1e2!3m6!1sAF1QipNeN2vVNUszNhCv-2H-COiDkAa_NEKxPLWjRsiN!2e10!3e12!6shttps:%2F%2Flh5.googleusercontent.com%2Fp%2FAF1QipNeN2vVNUszNhCv-2H-COiDkAa_NEKxPLWjRsiN%3Dw114-h86-k-no!7i4128!8i3096!4m16!1m8!3m7!1s0x3a382cf4952d0433:0x8274e4b69a192f9a!2sYendapalli,+Andhra+Pradesh+533447!3b1!8m2!3d17.1012588!4d82.3255194!16s%2Fg%2F1v0lj5n8!3m6!1s0x3a382c8b2143275d:0x14cb7971e0f9d0d5!8m2!3d17.1007239!4d82.3223926!10e5!16s%2Fg%2F11d_8gq4yq?entry=ttu" + encodeURI($(this).find("h3").text()); // Using the education name as the query
+            
+            $(this).click(function() {
+              window.open(googleMapsURL, "_blank"); // Open the Google Maps URL in a new tab/window
+            });
+          });
+        });
+      </script>
+      
+    
+</head>
+<body>
+
+<!-- Main container -->
+<div class="main-container">
+
+    <!-- Image at middle left -->
+    <div class="profile-image-container">
+        <img src="Suresh.jpg" alt="Suresh" class="profile-image">
+    </div>
+
+    <!-- Content container -->
+    <div class="content-container">
+
+        <!-- About Me Section -->
+        <section id="about" class="section">
+            <nav>
+                   <span> <a href="P1.html">Home</a></span>
+                   <a href="about.html" >About</a>
+                   <a href="education.html">Education</a>
+                    <a href="skills.html">Skills</a>
+                    <a href="P1.html">Articles/Projects</a>
+                    <a href="contact.html">Contact</a>
+                </ul>
+            </nav>
+            <!-- Detailed Information About Yourself -->
+        </section>
+
+        <!-- Portfolio Section -->
+        <section id="portfolio" class="section">
+            <h2>YALLA VENKATA SURESH</h2>
+            <H4>Data Science Enthusiast</H4>
+            <!-- Projects Showcase -->
+            <div id="map"></div>
+
+            <div id="education-details">
+              <div class="education" id="educ1">
+                <h3>B.Tech. in Computer Science</h3>
+                <p>RGUKT IIIT, Srikakulam</p>
+                <p>Expected Graduation: 2025</p>
+              </div>
+              <div class="education" id="educ2">
+                <h3>Intermediate in MPC</h3>
+                <p>RGUKT IIIT, Srikakulam</p>
+                <p>Graduated: 2021</p>
+              </div>
+              <div class="education" id="educ3">
+                <h3>SSC</h3>
+                <p>ZPPH School, Yandapalli, Kakinada</p>
+                <p>Graduated: 2019</p>
+              </div>
+            </div>
+            
+        </section>
+
+        <!-- Other sections... -->
+
+    </div>
+
+</div>
+
+</body>
+</html>

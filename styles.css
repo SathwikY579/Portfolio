@@ -1,0 +1,201 @@
+body {
+    background-color: #000;
+    color: #fff;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.main-container {
+    display: flex;
+}
+
+.profile-image-container {
+    width: 200px;
+    height: 200px;
+    margin: auto 0;
+    border-radius: 50%;
+    overflow: hidden;
+    transition: transform 0.5s ease;
+}
+
+.profile-image {
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.content-container {
+    flex: 1;
+    padding: 20px;
+}
+
+.section {
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    transition: background-color 0.3s;
+}
+
+.section.hover {
+    background-color: #444; /* Darker color on hover */
+}
+
+.projects-container {
+    display: flex;
+    justify-content: space-around;
+}
+
+.project-circle {
+    position: relative; /* Ensure proper positioning for overlay */
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-bottom: 20px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    text-align:center;
+}
+
+.project-circle img {
+    position: absolute; /* Position the image absolutely within the circle */
+    top: 0;
+    left: 0;
+    width: 100%; /* Ensure the image fills the circle container */
+    height: 100%;
+    object-fit: cover; /* Ensure the image maintains its aspect ratio and covers the entire container */
+}
+
+
+.project-circle:hover {
+    transform: scale(1.1); /* Zoom effect on hover */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Box shadow effect on hover */
+}
+
+.project-image {
+    width: 100%;
+    height: auto;
+}
+nav {
+    display: flex;
+    justify-content: space-between; /* Spreads the links horizontally */
+    z-index: 1000;
+    border: 10px solid transparent; /* Set a transparent border initially */
+    border-image: linear-gradient(to right, #ff8a00, #e52e71); /* Apply linear gradient to the border */
+    border-image-slice: 10;
+    animation: gradientBorder 10s infinite alternate;
+}
+
+nav a {
+    color: blanchedalmond;
+    font-size: 25px;
+    text-decoration: none;
+    flex: 1; /* Makes each link equal in size */
+    text-align: center; /* Centers the text horizontally */
+}
+.project-circle figcaption {
+    position: absolute;
+    bottom: 1%; /* Adjust this value as needed to move the caption below the circle */
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 5px;
+    font-size: 12px;
+    text-align: center;
+}
+@keyframes gradientBorder {
+    0% {
+        border-image: linear-gradient(to right, #ff8a00, #e52e71);
+    }
+    50% {
+        border-image: linear-gradient(to right, #e52e71, #ff8a00);
+    }
+    100% {
+        border-image: linear-gradient(to right, #ff8a00, #e52e71);
+    }
+}
+/* styles.css */
+
+#map {
+    height: 20px;
+    width: 100%;
+  }
+  
+  #education-details {
+    margin-top: 10px;
+  }
+  
+  .education {
+    background-color: #f5f5f5;
+    padding: 20px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    color:black;
+  }
+  #skills {
+    padding: 10px 0;
+    font-size: 23px;
+    
+  }
+  
+  #skills h2 {
+    text-align: center;
+  }
+  
+  #skills-list {
+    list-style-type: none;
+    padding: 0;
+    text-align: center;
+    color: black;
+  }
+  
+  #skills-list li {
+    display: inline-block;
+    background-color: #f5f5f5;
+    padding: 10px 20px;
+    margin: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  #skills-list li:hover {
+    background-color: #e0e0e0;
+    transition: background-color 0.3s ease;
+  }
+  #contact {
+    padding: 10px 0;
+    color:#e0e0e0;
+    font-size: 30px;
+    
+  }
+  
+  #contact h2 {
+    text-align: center;
+  }
+  
+  #contact-list {
+    list-style-type: none;
+    padding: 0;
+    text-align: center;
+    color:aliceblue;
+  }
+  #contact-list li {
+    margin-bottom: 15px;
+    font-size: 25px; /* Increase the font size of the text */
+  }
+  
+  .icon {
+    width: 30px; /* Increase the width of the icons */
+    height: auto; /* Maintain aspect ratio */
+    margin-right: 10px;
+  }
+  #contact-list a {
+    color: white; /* Set the color of the links to white */
+    text-decoration: none; /* Remove underline from the links */
+  }
+  
+  #contact-list a:hover {
+    text-decoration: underline; /* Add underline on hover */
+  }
+  
+  
