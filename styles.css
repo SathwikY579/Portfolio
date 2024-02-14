@@ -2,20 +2,28 @@ body {
     background-color: #000;
     color: #fff;
     margin: 0;
-    font-family: Arial, sans-serif;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: large;
 }
 
 .main-container {
     display: flex;
+    position: relative;
 }
 
 .profile-image-container {
-    width: 200px;
-    height: 200px;
-    margin: auto 0;
-    border-radius: 50%;
-    overflow: hidden;
-    transition: transform 0.5s ease;
+  width: 200px;
+  height: 200px;
+  margin: auto 0;
+  border-radius: 50%;
+  overflow: hidden;
+  transition: transform 0.5s ease;
+   /* Fix the position */
+ 
+  top: -100px; /* Position at the top of the viewport */
+  left: -100px; /* Position at the left of the viewport */
+  padding-top: 0px; /* Add padding for spacing */
+   /* Ensure it's above other content */
 }
 
 .profile-image {
@@ -34,6 +42,7 @@ body {
     margin-bottom: 20px;
     border-radius: 10px;
     transition: background-color 0.3s;
+    
 }
 
 .section.hover {
@@ -197,5 +206,16 @@ nav a {
   #contact-list a:hover {
     text-decoration: underline; /* Add underline on hover */
   }
+  .slide-in {
+    transition: transform 0.3s ease; /* Smooth transition */
+  }
   
+  .slide-in a {
+    position: relative;
+    z-index: 1; /* Ensure links are clickable */
+  }
+  
+  .slide-in:hover {
+    transform: translateX(20px); /* Slide the item to the right on hover */
+  }
   

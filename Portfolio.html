@@ -3,105 +3,310 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Data Scientist Portfolio</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Data Science Enthusiast</title>
+    <link rel="stylesheet" href="styles.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script>
         // jQuery document ready function
         $(document).ready(function() {
-            // Smooth scrolling for navigation links
-            $('a[href*="#"]').on('click', function(event) {
-                if (this.hash !== '') {
-                    event.preventDefault();
-                    var hash = this.hash;
-                    $('html, body').animate({
-                        scrollTop: $(hash).offset().top
-                    }, 800, function(){
-                        window.location.hash = hash;
-                    });
-                }
+            // Add hover effect for each section
+            $('.section').hover(function() {
+                $(this).addClass('hover');
+            }, function() {
+                $(this).removeClass('hover');
             });
         });
     </script>
+    <style>
+         #portfolio {
+         text-align: left;
+        }
+    </style>
+    <script>
+        // jQuery document ready function
+        $(document).ready(function() {
+            // Add hover effect for each section
+            $('.section').hover(function() {
+                $(this).addClass('hover');
+            }, function() {
+                $(this).removeClass('hover');
+            });
+        });
+    </script>
+    <style>
+        /* Define styles for the "About Me" section */
+        .section {
+            padding: 50px 0;
+            text-align: center;
+        }
+    
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+    
+        .about-content p {
+            opacity: 0; /* Initially hide the paragraphs */
+            transition: opacity 1s ease-in-out; /* Add transition for opacity */
+        }
+    
+        /* Add animation to fade in the paragraphs when they become visible */
+        .about-content p.fade-in {
+            opacity: 1;
+        }
+        #portfolio {
+         text-align: left;
+        }
+    </style>
+    
+    <script>
+        // JavaScript to trigger the animation when the section is scrolled into view
+        document.addEventListener("DOMContentLoaded", function() {
+            // Get all paragraphs within the "About Me" section
+            var paragraphs = document.querySelectorAll(".about-content p");
+    
+            // Function to check if an element is in the viewport
+            function isElementInViewport(el) {
+                var rect = el.getBoundingClientRect();
+                return (
+                    rect.top >= 0 &&
+                    rect.left >= 0 &&
+                    rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+                    rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+                );
+            }
+    
+            // Function to check if any paragraph is in the viewport and add the fade-in class
+            function checkElementsVisibility() {
+                paragraphs.forEach(function(paragraph) {
+                    if (isElementInViewport(paragraph)) {
+                        paragraph.classList.add("fade-in");
+                    }
+                });
+            }
+    
+            // Check paragraph visibility when the page is loaded and when scrolled
+            checkElementsVisibility();
+            window.addEventListener("scroll", checkElementsVisibility);
+        });
+    </script>
+    <script>
+        // jQuery document ready function
+        $(document).ready(function() {
+            // Add hover effect for each section
+            $('.section').hover(function() {
+                $(this).addClass('hover');
+            }, function() {
+                $(this).removeClass('hover');
+            });
+        });
+    </script>
+    <style>
+         #portfolio {
+         text-align: left;
+        }
+    </style>
+    <script>
+        // jQuery document ready function
+        $(document).ready(function() {
+            // Add hover effect for each section
+            $('.section').hover(function() {
+                $(this).addClass('hover');
+            }, function() {
+                $(this).removeClass('hover');
+            });
+        });
+    </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function() {
+          // Add markers to the map for each education location
+          // Here, you would use a mapping API like Google Maps API
+          // For demonstration purposes, I'm using a simple Google Maps URL
+          $('#educ1').each(function(index) {
+            // Replace this URL with the actual Google Maps URL for each location
+            var googleMapsURL = "https://www.google.com/maps/place/RGUKT+IIIT+SKLM/@18.2878218,83.8256314,3a,75y,90t/data=!3m8!1e2!3m6!1sAF1QipPgJ4o--HAD78uNZRAYOpSbHgFu2lrNk8YGB9XS!2e10!3e12!6shttps:%2F%2Flh5.googleusercontent.com%2Fp%2FAF1QipPgJ4o--HAD78uNZRAYOpSbHgFu2lrNk8YGB9XS%3Dw152-h86-k-no!7i3264!8i1840!4m11!1m2!2m1!1srgukt+srikakulam!3m7!1s0x3a3c13503f331c41:0xb4212620d053a81f!8m2!3d18.2878218!4d83.8256314!10e5!15sChByZ3VrdCBzcmlrYWt1bGFtkgEKdW5pdmVyc2l0eeABAA!16s%2Fg%2F11h2p4s2_5?entry=ttu" + encodeURI($(this).find("h3").text()); // Using the education name as the query
+            
+            $(this).click(function() {
+              window.open(googleMapsURL, "_blank"); // Open the Google Maps URL in a new tab/window
+            });
+          });
+          $('#educ2').each(function(index) {
+            // Replace this URL with the actual Google Maps URL for each location
+            var googleMapsURL = "https://www.google.com/maps/place/RGUKT+IIIT+Boys+Campus,+Srikakulam/@18.2681788,83.8091616,3a,75y,90t/data=!3m8!1e2!3m6!1sAF1QipNc9ryjZsOtlgHLbcftmwJq9Rg-2B6QOhAfku4k!2e10!3e12!6shttps:%2F%2Flh5.googleusercontent.com%2Fp%2FAF1QipNc9ryjZsOtlgHLbcftmwJq9Rg-2B6QOhAfku4k%3Dw86-h114-k-no!7i3120!8i4160!4m11!1m2!2m1!1srgukt+srikakulam!3m7!1s0x3a3c13a13fc5f4d3:0x9f088865896f394a!8m2!3d18.2681788!4d83.8091616!10e5!15sChByZ3VrdCBzcmlrYWt1bGFtkgEKdW5pdmVyc2l0eeABAA!16s%2Fg%2F11h579f1vf?entry=ttu" + encodeURI($(this).find("h3").text()); // Using the education name as the query
+            
+            $(this).click(function() {
+              window.open(googleMapsURL, "_blank"); // Open the Google Maps URL in a new tab/window
+            });
+          });
+          $('#educ3').each(function(index) {
+            // Replace this URL with the actual Google Maps URL for each location
+            var googleMapsURL = "https://www.google.com/maps/place/Z.P.P.High+School,Yendapalli/@17.1007239,82.3223926,3a,75y,90t/data=!3m8!1e2!3m6!1sAF1QipNeN2vVNUszNhCv-2H-COiDkAa_NEKxPLWjRsiN!2e10!3e12!6shttps:%2F%2Flh5.googleusercontent.com%2Fp%2FAF1QipNeN2vVNUszNhCv-2H-COiDkAa_NEKxPLWjRsiN%3Dw114-h86-k-no!7i4128!8i3096!4m16!1m8!3m7!1s0x3a382cf4952d0433:0x8274e4b69a192f9a!2sYendapalli,+Andhra+Pradesh+533447!3b1!8m2!3d17.1012588!4d82.3255194!16s%2Fg%2F1v0lj5n8!3m6!1s0x3a382c8b2143275d:0x14cb7971e0f9d0d5!8m2!3d17.1007239!4d82.3223926!10e5!16s%2Fg%2F11d_8gq4yq?entry=ttu" + encodeURI($(this).find("h3").text()); // Using the education name as the query
+            
+            $(this).click(function() {
+              window.open(googleMapsURL, "_blank"); // Open the Google Maps URL in a new tab/window
+            });
+          });
+        });
+      </script>
+       <script>
+        // jQuery document ready function
+        $(document).ready(function() {
+            // Add hover effect for each section
+            $('.section').hover(function() {
+                $(this).addClass('hover');
+            }, function() {
+                $(this).removeClass('hover');
+            });
+        });
+    </script>
+    <style>
+         #portfolio {
+         text-align: left;
+        }
+    </style>
+    <script>
+    $(document).ready(function() {
+        $('#skills-list li').click(function() {
+          $(this).toggleClass('active');
+        });
+      });
+      </script>
 </head>
 <body>
 
-<!-- Navigation -->
-<nav>
-    <ul>
-        <li><a href="#home">Home</a></li>
-        <li><a href="#about">About</a></li>
+<!-- Main container -->
 
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#blog">Blog</a></li>
-        <li><a href="#contact">Contact</a></li>
-    </ul>
-</nav>
+<div class="main-container">
 
-<!-- Home Section -->
-<section id="home" class="section">
-    <div class="container">
-        <h1>YALLA VENKATA SURESH</h1>
+    <!-- Image at middle left -->
+    <div class="profile-image-container" style="padding-top: 0px;">
+        <img src="Suresh.jpg" alt="Suresh" class="profile-image">
     </div>
-</section>
-<!-- Portfolio Section -->
-<section id="portfolio" class="section">
-    <div class="container">
-        <!-- Image with Box Effect -->
-        <div class="portfolio-item">
-            <img src="Suresh.jpg" alt="Portfolio Image">
-            <div class="overlay"></div>
-        </div>
-    </div>
-</section>
 
+    <!-- Content container -->
+    <div class="content-container">
 
-<!-- About Me Section -->
-<section id="about" class="section">
-    <div class="container">
-        <h2>About Me</h2>
-        <!-- Detailed Information About Yourself -->
-    </div>
-</section>
+        <!-- About Me Section -->
+        <section id="about" class="section">
+            <nav>
+                   <span> <a href="Portfolio.html">Home</a></span>
+                   <a href="about.html" >About</a>
+                   <a href="education.html">Education</a>
+                    <a href="skills.html">Skills</a>
+                    <a href="P1.html">Articles/Projects</a>
+                    <a href="contact.html">Contact</a>
+                </ul>
+            </nav>
+            <!-- Detailed Information About Yourself -->
+        </section>
 
-<!-- Portfolio Section -->
-<section id="portfolio" class="section">
-    <div class="container">
-        <h2>Portfolio</h2>
-        <!-- Projects Showcase -->
-    </div>
-</section>
+        <!-- Portfolio Section -->
+        <section id="portfolio" class="section">
+            <h2>YALLA VENKATA SURESH</h2>
+            <H4>Data Science Enthusiast</H4>
+            <!-- Projects Showcase -->
+            <div class="projects-container">
+                <!-- Each project represented as a circle -->
+                <div class="project-circle">
+                    <a href="https://github.com/SathwikY579/Bell-Pepper">
+                    <img src="bellpepper.jpg" alt="Project 1" class="project-image">
+                    <figcaption>Bell Pepper</figcaption>
+                </a>
+                </div>
+                
+                <div class="project-circle">
+                    <a href="https://github.com/SathwikY579/Lung-Cancer-Detection">
+                    <img src="lungcancer.jpg" alt="Project 2" class="project-image">
+                    <figcaption>Lung Cancer</figcaption>
+                </a>
+                </div>
+                <div class="project-circle">
+                    <a href="https://github.com/SathwikY579/Unstructured_Data">
+                    <img src="unstructured.png" alt="Project 3" class="project-image">
+                    <figcaption>Unstructured Data</figcaption>
+                </a>
+                </div>
+                <div class="project-circle">
+                    <a href="">
+                    <img src="facemask.jpg" alt="Project 4" class="project-image">
+                    <figcaption>Face Mask Detection</figcaption>
+                </a>
+                </div>
+                
 
-<!-- Skills Section -->
-<section id="skills" class="section">
-    <div class="container">
-        <h2>Skills</h2>
-        <!-- List of Skills and Skill Proficiency Bars -->
-    </div>
-</section>
+                <!-- Add more projects as needed -->
+            </div>
+        </section>
+        <section id="about" class="section">
+            <div class="container">
+                <h2>About Me</h2>
+                <div class="about-content" style="font-size: 20px;" >
+                    <p>My name is Yalla Venkata Suresh. I am currently studying in RGUKT IIIT Srikakulam campus in the 3rd year of the Computer Science and Engineering (CSE) branch.</p>
+                    <p>I am passionate about data science and consider myself a data science enthusiast. I have a strong foundation in machine learning (ML), deep learning (DL), and data analytics.</p>
+                    <p>During my academic journey, I have gained practical experience in applying ML and DL techniques to solve real-world problems. I have also undertaken research work in the field of machine learning, where I explored various algorithms and methodologies.</p>
+                    <p>My academic background, coupled with my passion for data science, drives me to continually learn and grow in this field. I am eager to contribute my skills and knowledge to meaningful projects and collaborations in the data science community.</p>
+                    <p>Feel free to reach out to me for further discussion or collaboration opportunities.</p>
+                </div>
+            </div>
+        </section>
+        <section id="portfolio" class="section">
+            <h1>Education</h1>
+            <!-- Projects Showcase -->
+            <div id="map"></div>
 
-<!-- Blog/Articles Section -->
-<section id="blog" class="section">
-    <div class="container">
-        <h2>Blog/Articles</h2>
-        <!-- Data Science Blog Posts -->
-    </div>
-</section>
+            <div id="education-details">
+              <div class="education" id="educ1">
+                <h3>B.Tech. in Computer Science</h3>
+                <p>RGUKT IIIT, Srikakulam</p>
+                <p>Expected Graduation: 2025</p>
+              </div>
+              <div class="education" id="educ2">
+                <h3>Intermediate in MPC</h3>
+                <p>RGUKT IIIT, Srikakulam</p>
+                <p>Graduated: 2021</p>
+              </div>
+              <div class="education" id="educ3">
+                <h3>SSC</h3>
+                <p>ZPPH School, Yandapalli, Kakinada</p>
+                <p>Graduated: 2019</p>
+              </div>
+            </div>
+            
+        </section>
+        <section id="skills" class="section">
+            <h2>Skills</h2>
+            <ul id="skills-list">
+              <li>Machine Learning</li>
+              <li>Data Analysis</li>
+              <li>Python</li>
+              <li>Java</li>
+              <li>SQL</li>
+              <li>Data Visualization</li>
+              <li>Statistical Analysis</li>
+              <li>Deep Learning (e.g., TensorFlow, PyTorch)</li>
+              <li>MS Excel</li>
+              <li>MS Word</li>
+              <li>PowerPoint</li>
+              <li>Power BI</li>
+            </ul>
+          </section>
+          
+    </section>
+        <section id="contact" class="section">
+            <h2>Contact</h2>
+            <ul id="contact-list">
+              <li><img src="email.png" alt="Email icon" class="icon"> <a href="mailto:sathwiky579@gmail.com">sathwiky579@gmail.com</a></li>
+              <li><img src="phone.png" alt="Phone icon" class="icon"> <a href="tel:9391198527">9391198527</a></li>
+              <li><img src="linkedin.png" alt="LinkedIn icon" class="icon"> <a href="https://linkedin.com/in/suresh-yalla">linkedin.com/in/suresh-yalla</a></li>
+              <li><img src="github.png" alt="GitHub icon" class="icon"> <a href="https://github.com/SathwikY579">github.com/SathwikY579</a></li>
+            </ul>
+          </section>
+        <!-- Other sections... -->
 
-<!-- Contact Section -->
-<section id="contact" class="section">
-    <div class="container">
-        <h2>Contact Me</h2>
-        <!-- Contact Form and Social Media Links -->
     </div>
-</section>
 
-<!-- Footer -->
-<footer>
-    <div class="container">
-        <p>&copy; 2024 Your Name</p>
-    </div>
-</footer>
+</div>
 
 </body>
 </html>
